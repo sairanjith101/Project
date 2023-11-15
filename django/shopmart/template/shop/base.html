@@ -5,7 +5,8 @@
   </head>
   <body>
     <div class="font">
-      {% include 'shop/navbar.html' %}{% block content %} {% endblock content %}
+      {% include 'shop/navbar.html' %} {% include 'shop/slider.html' %}
+      <div>{% block content %} {% endblock content %}</div>
     </div>
   </body>
 </html>
