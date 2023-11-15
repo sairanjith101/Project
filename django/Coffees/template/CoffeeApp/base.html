@@ -2,8 +2,9 @@
   <head>
     <title>{% block title %} {% endblock title %}</title>
     {% load static %}
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css" />
   </head>
   <body>
-    {% block content %} {% endblock content %}
+    {% include 'CoffeeApp/navbar.html' %} {% block content %} {% endblock %}
   </body>
 </html>

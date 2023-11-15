@@ -2,6 +2,7 @@
   {% extends 'CoffeeApp/base.html' %}
   <head>
     {% block title %} Coffee Shop {% endblock title %}
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css" />
   </head>
   <body>
     {% block content %}
@@ -12,7 +13,7 @@
         <img src="{{item.image.url}}" alt="Coffee" />
         <h5>{{item.name}}</h5>
         <p>RS.{{item.price}}</p>
-        <a href="#">Add to cart</a>
+        <button><a href="#">Add to cart</a></button>
       </div>
       {% endfor %}
     </div>
