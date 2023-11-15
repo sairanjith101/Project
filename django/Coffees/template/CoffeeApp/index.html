@@ -1,5 +1,5 @@
 <html>
-  {% extends 'CoffeeApp/base.html' %} {% load static %}
+  {% extends 'CoffeeApp/base.html' %}
   <head>
     {% block title %} Coffee Shop {% endblock title %}
   </head>
@@ -7,17 +7,11 @@
     {% block content %}
     <h1>WELCOME TO COFFEE SHOP</h1>
     <div class="row">
-      {% for coffee in coffee %}
+      {% for item in coffee %}
       <div class="coffee-item">
-        {% if coffee.image %} {% with "upload/"|add:coffee.image.url as
-        coffee.image %}
-        <p>Image Path: {% static coffee.image %}</p>
-        <img src="{% static coffee.image %}" alt="Coffee" />
-        {% endwith %} {% else %}
-        <p>No Image Found</p>
-        {% endif %}
-        <h5>{{coffee.name}}</h5>
-        <p>RS.{{coffee.price}}</p>
+        <img src="{{item.image.url}}" alt="Coffee" />
+        <h5>{{item.name}}</h5>
+        <p>RS.{{item.price}}</p>
         <a href="#">Add to cart</a>
       </div>
       {% endfor %}
