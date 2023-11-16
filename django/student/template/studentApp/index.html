@@ -1,0 +1,27 @@
+<html>
+  {% extends 'studentApp/base.html' %}
+  <head>
+    {% block title %} Student Portal {% endblock title %}
+  </head>
+  <body>
+    {% block content %}
+    <h1>Student Infomation System</h1>
+    <table>
+      <thead>
+        <th>Student No</th>
+        <th>Student Name</th>
+        <th>Student Class</th>
+        <th>Student Address</th>
+      </thead>
+      <tr>
+        {% for st in student %}
+        <td>{{st.Sno}}</td>
+        <td>{{st.Sname}}</td>
+        <td>{{st.Sclass}}</td>
+        <td>{{st.Saddress}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endblock content %}
+  </body>
+</html>

@@ -19,5 +19,10 @@ from django.urls import path
 from studentApp import views
 
 urlpatterns = [
-    path('home/', views.home, name='home'),
+    path('home/', views.retrieve_view, name='home'),
+    path('add/', views.create_view, name='add'),
+    path('delete/', views.delete_view, name='delete'),
+    path('erase/<id>', views.erase_view, name='erase'),
+    path('update/', views.update_view, name='update'),
+    path('new/<id>', views.new_view, name='new'),
 ]

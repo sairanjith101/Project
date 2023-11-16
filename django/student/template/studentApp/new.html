@@ -1,0 +1,41 @@
+<html>
+  {% extends 'studentApp/base.html' %}
+  <head>
+    {% block title %} Student Portal {% endblock title %}
+  </head>
+  <body>
+    {% block content %}
+    <h1>Update Student Details</h1>
+    <form method="post">
+      <div>
+        <label for="no">Student No</label>
+        <input type="text" name="Sno" value="{{student.Sno}}" />
+      </div>
+      <div>
+        <label for="name">Student Name</label>
+        <input type="text" name="Sname" id="name" value="{{student.Sname}}" />
+      </div>
+      <div>
+        <label for="class">Student Class</label>
+        <input
+          type="text"
+          name="Sclass"
+          id="class"
+          value="{{student.Sclass}}"
+        />
+      </div>
+      <div>
+        <label for="add">Student Address</label>
+        <input
+          type="text"
+          name="Saddress"
+          id="add"
+          value="{{student.Saddress}}"
+        />
+      </div>
+      {% csrf_token %}
+      <input type="submit" value="Update Student" />
+    </form>
+    {% endblock %}
+  </body>
+</html>

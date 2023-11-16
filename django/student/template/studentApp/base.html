@@ -1,0 +1,11 @@
+<html>
+  {% load static %}
+  <head>
+    <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="/static/css/index.css" type="text/css" />
+  </head>
+  <body>
+    <div>{% include 'studentApp/navbar.html' %}</div>
+    <div>{% block content %} {% endblock content %}</div>
+  </body>
+</html>
