@@ -128,6 +128,8 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [STATIC_DIR]
 
+MEDIA_URL = '/images/'
+
 MEDIA_ROOT = os.path.join(BASE_DIR2, 'static')
 
 # Default primary key field type

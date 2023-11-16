@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% extends 'shop/base.html' %}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% block title %} Collections | Online Shopping {% endblock title %}
+    <link rel="stylesheet" href="/static/css/collections.css" type="text/css" />
+  </head>
+  <body>
+    {% block content %}
+    <section class="container">
+      <div class="a">
+        <h1>Best Sellers</h1>
+        <p>Our most populer products based on sales. Updated Hourly</p>
+        <p>
+          <button><a href="">Already User</a></button>
+          <button><a href="">Register</a></button>
+        </p>
+      </div>
+    </section>
+    <section class="cat">
+      <div class="b">
+        <h4>Categories</h4>
+        <hr style="border-color: black" />
+      </div>
+    </section>
+
+    {% for item in category %}
+    <div class="c">
+      <img src="{{item.image.url}}" alt="" />
+      <a href="#">
+        <h5>{{item.name}}</h5>
+        <p>{{ item.description }}</p>
+      </a>
+    </div>
+    {% endfor %} {% endblock content %}
+  </body>
+</html>

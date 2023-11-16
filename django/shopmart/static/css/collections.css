@@ -1,0 +1,9 @@
+h1 {
+  text-align: center;
+}
+
+.c {
+  display: grid;
+  grid-template-columns: repeat(auto-fit);
+  border: 1px solid black;
+}
